@@ -3,12 +3,17 @@ This project is designed to predict the age of individuals based on a dataset us
 
 
 ## Data
-The data consists of two CSV files: train.csv and test.csv. The training data includes features like id, Sex, Age, and other attributes. The target variable is Age, which we aim to predict using the test data.
+The data consists of two CSV files: train.csv and test.csv. The training data includes features like id, Sex, Length, Diameter, Height, Weight,
+Shucked Weight, Viscera Weight, Shell Weight and Age. The target variable is Age, which we aim to predict using the test data.
 
 
 ## Pipeline Description
 The code performs the following steps:
-
+Data Preprocessing: Loads the data, replaces certain values in the 'Sex' column, and encodes categorical data.
+Feature Engineering: Generates polynomial features for the model to capture non-linear relationships.
+Feature Selection: Uses Recursive Feature Elimination with Cross-Validation (RFECV) to select the most important features.
+Model Training: Trains various regression models.
+Ensemble Learning: Combines the regression models using a stacking approach.
 
 ## Data Preprocessing: Loads the data, replaces certain values in the 'Sex' column, and encodes categorical data.
 Feature Engineering: Generates polynomial features for the model to capture non-linear relationships.
